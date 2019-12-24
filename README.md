@@ -1,7 +1,11 @@
 aw-import-ical
 ==============
 
-An importer for iCal files for ActivityWatch.
+An importer which continuously synchronizes Google Calendar with ActivityWatch.
+
+## Setup
+
+* You have to enable Google Calendar API in the API Console. Once you do that, download `credentials.json` [(Console Website)](https://console.developers.google.com/) and place it in the aw-import-ical folder.
 
 ## Usage
 

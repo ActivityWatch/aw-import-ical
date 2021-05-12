@@ -25,15 +25,21 @@ def load_events(filepath):
         if component.name == "VEVENT":
             # TODO: Test that timezones work properly
             # TODO: Handle recurrence rules
-            title = component.decoded('summary').decode("utf8")
+            title = component.decoded("summary").decode("utf8")
 
-            start = coerce2datetime(component.decoded('dtstart'))
-            end = coerce2datetime(component.decoded('dtend'))
+            start = coerce2datetime(component.decoded("dtstart"))
+            end = coerce2datetime(component.decoded("dtend"))
             duration = end - start
 
-            attendees = [str(attendee) for attendee in (component.get('attendee') or [])]
+            attendees = [
+                str(attendee) for attendee in (component.get("attendee") or [])
+            ]
 
-            e = Event(timestamp=start, duration=duration, data={"title": title, "attendees": attendees})
+            e = Event(
+                timestamp=start,
+                duration=duration,
+                data={"title": title, "attendees": attendees},
+            )
             events.append(e)
 
             # print(title)
@@ -53,12 +59,12 @@ if __name__ == "__main__":
     print(f"Loaded {len(events)} events")
     aw = ActivityWatchClient(testing=True)
 
-    bucket_name = 'ical-import'
+    bucket_name = "ical-import"
 
     if bucket_name in aw.get_buckets():
         aw.delete_bucket(bucket_name)
 
-    aw.create_bucket(bucket_name, 'calendar')
+    aw.create_bucket(bucket_name, "calendar")
     aw.insert_events(bucket_name, events)
 
 

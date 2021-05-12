@@ -22,25 +22,25 @@ tests_no_zope = ["coverage[toml] (>=5.0.2)", "hypothesis", "pympler", "pytest (>
 
 [[package]]
 name = "aw-client"
-version = "0.5.0"
+version = "0.5.1"
 description = "Client library for ActivityWatch"
 category = "main"
 optional = false
 python-versions = ">=3.7,<4.0"
 
 [package.dependencies]
-aw-core = ">=0.5,<0.6"
+aw-core = ">=0.5.1,<0.6.0"
 click = ">=7.1.1,<8.0.0"
 persist-queue = ">=0.6.0,<0.7.0"
 requests = ">=2.22.0,<3.0.0"
 
 [[package]]
 name = "aw-core"
-version = "0.5.0"
+version = "0.5.1"
 description = "Core library for ActivityWatch"
 category = "main"
 optional = false
-python-versions = ">=3.6,<4.0"
+python-versions = ">=3.7,<4.0"
 
 [package.dependencies]
 appdirs = ">=1.4.3,<2.0.0"
@@ -574,7 +574,7 @@ testing = ["pytest (>=4.6)", "pytest-checkdocs (>=1.2.3)", "pytest-flake8", "pyt
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.7"
-content-hash = "c7197ffffaa406ba965257e0d26cd9d277c665a2bc1f1cec999bd01856ef0116"
+content-hash = "d53259b2c85acbe435b00bff3ad3deab33209fe2060dce6cddd322a131dc0a3b"
 
 [metadata.files]
 appdirs = [
@@ -586,12 +586,12 @@ attrs = [
     {file = "attrs-21.2.0.tar.gz", hash = "sha256:ef6aaac3ca6cd92904cdd0d83f629a15f18053ec84e6432106f7a4d04ae4f5fb"},
 ]
 aw-client = [
-    {file = "aw-client-0.5.0.tar.gz", hash = "sha256:d3599b8a12949961e7657c6114fbbcd8e8417d94940792fc02d29afc47a348c9"},
-    {file = "aw_client-0.5.0-py3-none-any.whl", hash = "sha256:16bcc53171b98c369454ce380989ca00aaf804a2a422a4674b60e2f3ae7820a6"},
+    {file = "aw-client-0.5.1.tar.gz", hash = "sha256:a0dc3df0ff64fda18a53464929020f96e19afcd6a90ce4c17b6535342d9e814b"},
+    {file = "aw_client-0.5.1-py3-none-any.whl", hash = "sha256:065fc14104ee7cddea34e03f7c410b987b66649f7d7ed1a0cbe24b62af32c319"},
 ]
 aw-core = [
-    {file = "aw-core-0.5.0.tar.gz", hash = "sha256:d74c22b4b338a20e05a3e8a345a1bc427a2579be669c5b9ea1fd04bb6fd18f9e"},
-    {file = "aw_core-0.5.0-py3-none-any.whl", hash = "sha256:d72a56a532b447fee48cad2ba0e602713d93b803dff3283256273ca5859007e5"},
+    {file = "aw-core-0.5.1.tar.gz", hash = "sha256:ec6ba1d140f76f832f8e69e4ff32ed498d994d438073bfa59ea588613ad2cff6"},
+    {file = "aw_core-0.5.1-py3-none-any.whl", hash = "sha256:2ce56a9365fde822e44c1cd24c9de7a6ca52ff1f5cbad794cc39c228d9a3a345"},
 ]
 black = [
     {file = "black-21.5b1-py3-none-any.whl", hash = "sha256:8a60071a0043876a4ae96e6c69bd3a127dad2c1ca7c8083573eb82f92705d008"},

@@ -9,3 +9,6 @@ verify_ssl = true
 icalendar = "*"
 aw-core = {editable = true,git = "https://github.com/ActivityWatch/aw-core.git"}
 aw-client = {editable = true,git = "https://github.com/ActivityWatch/aw-client.git"}
+google-api-python-client = "*"
+google-auth-httplib2 = "*"
+google-auth-oauthlib = "*"
